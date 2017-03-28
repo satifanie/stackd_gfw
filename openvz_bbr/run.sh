@@ -12,7 +12,7 @@ iptables -t nat -A PREROUTING -i venet0 -p tcp --dport 30022 -j DNAT --to-destin
 iptables -t nat -A PREROUTING -i venet0 -p tcp --dport 8989 -j DNAT --to-destination 10.0.0.2
 iptables -t nat -A PREROUTING -i venet0 -p udp --dport 8989 -j DNAT --to-destination 10.0.0.2
 
-screen -dmS uml /data/openvz-bbr/vmlinux root=/dev/ubda ubd0=/data/openvz-bbr/alpine_mini rw eth0=tuntap,tap0 mem=64m
+screen -dmS uml /opt/openvz_bbr/vmlinux root=/dev/ubda ubd0=/opt/openvz_bbr/alpine_mini rw eth0=tuntap,tap0 mem=64m
 
 }
 stop(){
